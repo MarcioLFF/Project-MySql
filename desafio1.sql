@@ -52,10 +52,10 @@ CREATE TABLE historico_reproducao (
 
 CREATE TABLE seguindo_artista(
   usuario_id INT NOT NULL,
-  id_artista INT NOT NULL,
-  CONSTRAINT PRIMARY KEY (usuario_id, id_artista),
+  artista_id INT NOT NULL,
+  CONSTRAINT PRIMARY KEY (usuario_id, artista_id),
   FOREIGN KEY (usuario_id) REFERENCES usuarios (usuario_id),
-  FOREIGN KEY (id_artista) REFERENCES artistas (id_artista)
+  FOREIGN KEY (artista_id) REFERENCES artistas (artista_id)
 ) engine = InnoDB;
 
 INSERT INTO planos (nome, valor_plano)
